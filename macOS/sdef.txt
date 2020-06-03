@@ -1,0 +1,86 @@
+/Library/ScriptingAdditions/Numerics.osax/Contents/Resources/Numerics.sdef
+/Library/ScriptingAdditions/FITS.osax/Contents/Resources/FITS.sdef
+/Library/ScriptingAdditions/XMLLib.osax/Contents/Resources/XMLLib.sdef
+/Library/ScriptingAdditions/Satimage.osax/Contents/Resources/Satimage.sdef
+/System/Library/CoreServices/System Events.app/Contents/Resources/SystemEvents.sdef
+/System/Library/CoreServices/VoiceOver.app/Contents/Resources/VoiceOver.sdef
+/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.sdef
+/System/Library/CoreServices/FolderActionsDispatcher.app/Contents/Resources/FolderActionsDispatcher.sdef
+/System/Library/CoreServices/Image Events.app/Contents/Resources/ImageEvents.sdef
+/System/Library/CoreServices/Applications/Screen Sharing.app/Contents/Resources/ScreenSharing.sdef
+/System/Library/CoreServices/Applications/Folder Actions Setup.app/Contents/Resources/Folder Actions Setup.sdef
+/System/Library/CoreServices/AppleScript Utility.app/Contents/Resources/AppleScriptUtility.sdef
+/System/Library/ScriptingAdditions/StandardAdditions.osax/Contents/Resources/StandardAdditions.sdef
+/System/Library/ScriptingDefinitions/CocoaStandard.sdef
+/System/Library/Templates/Data/Applications/Safari.app/Contents/Resources/Safari.sdef
+/System/Library/PrivateFrameworks/FolderActionsKit.framework/Versions/A/Resources/FolderActions.sdef
+/System/Library/Frameworks/ScriptingBridge.framework/Versions/A/Resources/intrinsics.sdef
+/System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef
+/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/Resources/Compatibility.sdef
+/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Plugins/PrinterProxy.app/Contents/Resources/PrinterProxy.sdef
+/System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/Wish.app/Contents/Resources/Wish.sdef
+/System/Library/Frameworks/Foundation.framework/Versions/C/Resources/Intrinsics.sdef
+/System/Applications/Music.app/Contents/Resources/com.apple.Music.sdef
+/System/Applications/QuickTime Player.app/Contents/Resources/QuickTimePlayerX.sdef
+/System/Applications/Notes.app/Contents/Resources/Notes.sdef
+/System/Applications/TV.app/Contents/Resources/com.apple.TV.sdef
+/System/Applications/Mail.app/Contents/Resources/Mail.sdef
+/System/Applications/Contacts.app/Contents/Resources/Contacts.sdef
+/System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.sdef
+/System/Applications/Utilities/Console.app/Contents/Resources/Console.sdef
+/System/Applications/Utilities/Bluetooth File Exchange.app/Contents/Resources/Bluetooth File Exchange.sdef
+/System/Applications/Photos.app/Contents/Resources/Photos.sdef
+/System/Applications/Messages.app/Contents/Resources/iChat.sdef
+/System/Applications/Reminders.app/Contents/Resources/Reminders.sdef
+/System/Applications/Calendar.app/Contents/Resources/iCal.sdef
+/System/Applications/System Preferences.app/Contents/Resources/SystemPreferences.sdef
+/System/Volumes/Data/Library/ScriptingAdditions/Numerics.osax/Contents/Resources/Numerics.sdef
+/System/Volumes/Data/Library/ScriptingAdditions/FITS.osax/Contents/Resources/FITS.sdef
+/System/Volumes/Data/Library/ScriptingAdditions/XMLLib.osax/Contents/Resources/XMLLib.sdef
+/System/Volumes/Data/Library/ScriptingAdditions/Satimage.osax/Contents/Resources/Satimage.sdef
+/System/Volumes/Data/System/Library/CoreServices/System Events.app/Contents/Resources/SystemEvents.sdef
+/System/Volumes/Data/System/Library/CoreServices/VoiceOver.app/Contents/Resources/VoiceOver.sdef
+/System/Volumes/Data/System/Library/CoreServices/Finder.app/Contents/Resources/Finder.sdef
+/System/Volumes/Data/System/Library/CoreServices/FolderActionsDispatcher.app/Contents/Resources/FolderActionsDispatcher.sdef
+/System/Volumes/Data/System/Library/CoreServices/Image Events.app/Contents/Resources/ImageEvents.sdef
+/System/Volumes/Data/System/Library/CoreServices/Applications/Screen Sharing.app/Contents/Resources/ScreenSharing.sdef
+/System/Volumes/Data/System/Library/CoreServices/Applications/Folder Actions Setup.app/Contents/Resources/Folder Actions Setup.sdef
+/System/Volumes/Data/System/Library/CoreServices/AppleScript Utility.app/Contents/Resources/AppleScriptUtility.sdef
+/System/Volumes/Data/System/Library/ScriptingAdditions/StandardAdditions.osax/Contents/Resources/StandardAdditions.sdef
+/System/Volumes/Data/System/Library/ScriptingDefinitions/CocoaStandard.sdef
+/System/Volumes/Data/System/Library/Templates/Data/Applications/Safari.app/Contents/Resources/Safari.sdef
+/System/Volumes/Data/System/Library/PrivateFrameworks/FolderActionsKit.framework/Versions/A/Resources/FolderActions.sdef
+/System/Volumes/Data/System/Library/Frameworks/ScriptingBridge.framework/Versions/A/Resources/intrinsics.sdef
+/System/Volumes/Data/System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.sdef
+/System/Volumes/Data/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/OpenScripting.framework/Versions/A/Resources/Compatibility.sdef
+/System/Volumes/Data/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/Print.framework/Versions/A/Plugins/PrinterProxy.app/Contents/Resources/PrinterProxy.sdef
+/System/Volumes/Data/System/Library/Frameworks/Tk.framework/Versions/8.5/Resources/Wish.app/Contents/Resources/Wish.sdef
+/System/Volumes/Data/System/Library/Frameworks/Foundation.framework/Versions/C/Resources/Intrinsics.sdef
+/System/Volumes/Data/System/Applications/Music.app/Contents/Resources/com.apple.Music.sdef
+/System/Volumes/Data/System/Applications/QuickTime Player.app/Contents/Resources/QuickTimePlayerX.sdef
+/System/Volumes/Data/System/Applications/Notes.app/Contents/Resources/Notes.sdef
+/System/Volumes/Data/System/Applications/TV.app/Contents/Resources/com.apple.TV.sdef
+/System/Volumes/Data/System/Applications/Mail.app/Contents/Resources/Mail.sdef
+/System/Volumes/Data/System/Applications/Contacts.app/Contents/Resources/Contacts.sdef
+/System/Volumes/Data/System/Applications/Utilities/Terminal.app/Contents/Resources/Terminal.sdef
+/System/Volumes/Data/System/Applications/Utilities/Console.app/Contents/Resources/Console.sdef
+/System/Volumes/Data/System/Applications/Utilities/Bluetooth File Exchange.app/Contents/Resources/Bluetooth File Exchange.sdef
+/System/Volumes/Data/System/Applications/Photos.app/Contents/Resources/Photos.sdef
+/System/Volumes/Data/System/Applications/Messages.app/Contents/Resources/iChat.sdef
+/System/Volumes/Data/System/Applications/Reminders.app/Contents/Resources/Reminders.sdef
+/System/Volumes/Data/System/Applications/Calendar.app/Contents/Resources/iCal.sdef
+/System/Volumes/Data/System/Applications/System Preferences.app/Contents/Resources/SystemPreferences.sdef
+/System/Volumes/Data/Users/wheel/Library/Printers/HP.app/Contents/Resources/PrinterProxy.sdef
+/System/Volumes/Data/Applications/Xcode.app/Contents/Resources/Xcode.sdef
+/System/Volumes/Data/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/Instruments.sdef
+/System/Volumes/Data/Applications/Spotify.app/Contents/Resources/Spotify.sdef
+/System/Volumes/Data/Applications/Suspicious Package.app/Contents/Resources/SuspiciousPackage.sdef
+/System/Volumes/Data/Applications/Safari.app/Contents/Resources/Safari.sdef
+/System/Volumes/Data/Applications/ControlPlane.app/Contents/Resources/ControlPlane.sdef
+/Users/wheel/Library/Printers/HP.app/Contents/Resources/PrinterProxy.sdef
+/Applications/Xcode.app/Contents/Resources/Xcode.sdef
+/Applications/Xcode.app/Contents/Applications/Instruments.app/Contents/Resources/Instruments.sdef
+/Applications/Spotify.app/Contents/Resources/Spotify.sdef
+/Applications/Suspicious Package.app/Contents/Resources/SuspiciousPackage.sdef
+/Applications/Safari.app/Contents/Resources/Safari.sdef
+/Applications/ControlPlane.app/Contents/Resources/ControlPlane.sdef

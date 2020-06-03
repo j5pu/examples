@@ -1,0 +1,4 @@
+#!python
+import import_getenv
+
+print('start-up script')

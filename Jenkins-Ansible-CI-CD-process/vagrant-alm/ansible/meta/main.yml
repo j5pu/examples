@@ -1,0 +1,11 @@
+dependencies:
+  - geerlingguy.java
+  - geerlingguy.jenkins
+  - geerlingguy.postgresql
+  - geerlingguy.sonar
+  - wtanaka.unzip
+  - savoirfairelinux.nexus3-oss
+  - geerlingguy.git
+  - tecris.maven
+  - geerlingguy.repo-epel
+  - geerlingguy.ansible

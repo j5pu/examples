@@ -1,0 +1,25 @@
+# https://github.com/geerlingguy/ansible-role-jenkins
+jenkins_package_state: latest
+jenkins_admin_username: admin
+jenkins_admin_password: admin123
+jenkins_plugins: [
+  'sonar', 
+  'nexus-artifact-uploader', 
+  'ansible', 
+  'workflow-aggregator', 
+  'slack', 
+  'slack-uploader', 
+  'git', 
+  'github', 
+  'credentials-binding',
+  'pipeline-utility-steps',
+  'disk-usage',
+  'ws-cleanup',
+  'ansible-tower',
+  'ansicolor'
+  ]
+maven_major: 3
+maven_release: 3.5.4
+maven_version: 3.5.4
+java_packages:
+  - java-1.8.0-openjdk-devel

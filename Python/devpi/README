@@ -1,0 +1,35 @@
+#
+PySOBER README
+--------------
+
+Staying sober with python!
+
+----------- ALT 1 - UPLOAD --------------------------
+devpi login fp --password=1Zaragoza$.
+devpi use $DEVPI
+devpi index -l
+devpi use -l
+devpi use fp/dev
+devpi upload
+devpi list example_devpi
+----------- ALT 2 - UPLOAD --------------------------
+devpi login fp --password=1Zaragoza$.
+devpi use $DEVPI/fp/dev
+python setup.py sdist
+devpi upload --from-dir
+devpi install example_devpi
+pip3 install example_devpi  # SALE ERROR
+devpi install example_devpi  # SALE ERROR
+----------- ALT 3 - UPLOAD --------------------------
+devpi login fp --password=1Zaragoza$.
+python3 setup.py sdist bdist_wheel
+twine upload -r dev dist/*
+pip3 install example_devpi  # SALE ERROR
+devpi test example_devpi
+devpi install example_devpi
+devpi push example_devpi fp/prod
+devpi list example_devpi
+
+test.lan:50007/+search?query=example_devpi
+
+

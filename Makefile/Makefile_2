@@ -1,0 +1,47 @@
+#BREW_CASK_COMMAND = brew cask install
+SSH_PORT = 50000
+USUARIO = fp
+
+all: ansible
+
+.PHONY: all
+
+sudoers:
+	if [[ ! -f /etc/sudoers.d/$(USUARIO) ]]; then
+ssh-port:
+	sudo sed -i "-bak" -n "/SockServiceName/{p;n;s/>.*</>$(SSH_PORT)</;};p" /System/Library/LaunchDaemons/ssh.plist;
+	sudo sed -i "-bak" -n "/SockServiceName/{p;n;s/>.*</>$sshport</;};p" /System/Library/LaunchDaemons/ssh.plist
+
+xcode:
+	xcode-select --install
+
+get-pip: xcode
+	curl https://bootstrap.pypa.io/get-pip.py -o $(GET_PIP_DIR)/get-pip.py
+	python $(GET_PIP_DIR)/get-pip.py --user
+
+ansible: pip
+	pip install --user ansible
+
+.PHONY: all $(BREW_CASK_PACKAGES)
+
+$(BREW_CASK_PACKAGES):
+	$(BREW_CASK_COMMAND) $@
+lenguage app android sunami
+kotlink
+
+rusua oday con sunami
+#all: ls
+
+#docker-edge:
+#	brew cask install docker-edge
+#
+#docker-configure: docker-edge
+
+
+ls:
+	ls
+
+echo:
+	echo $$PATH
+
+brew_cask:

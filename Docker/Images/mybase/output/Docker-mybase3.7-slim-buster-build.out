@@ -1,0 +1,53 @@
+Sending build context to Docker daemon  32.26kB
+Step 1/17 : FROM python:3.7-slim-buster
+ ---> f96c28b7013f
+Step 2/17 : ENV BACK_SLASH '\'
+ ---> Using cache
+ ---> 70e00b52a533
+Step 3/17 : ENV SINGLE_QUOTE "'"
+ ---> Using cache
+ ---> 29edf939c7b2
+Step 4/17 : ENV DOUBLE_QUOTE '"'
+ ---> Using cache
+ ---> b103a1968354
+Step 5/17 : ENV BACK_SLASH_SINGLE_QUOTE=${BACK_SLASH}${SINGLE_QUOTE}
+ ---> Using cache
+ ---> 354f2fd3e5cd
+Step 6/17 : ENV REGEX_HREF_LINK_1C_2C (?<=href=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])|(?<=link=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])
+ ---> Using cache
+ ---> 75f24b36aae7
+Step 7/17 : ENV REGEX_HREF_1C_2C (?<=href=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])
+ ---> Using cache
+ ---> 3dcd92140720
+Step 8/17 : ENV REGEX_LINK_1C_2C (?<=link=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])
+ ---> Using cache
+ ---> 1915660d86a3
+Step 9/17 : RUN apt-get update && apt-get install -y --no-install-recommends 		netcat 	&& rm -rf /var/lib/apt/lists/*
+ ---> Using cache
+ ---> d881f536870d
+Step 10/17 : RUN mkdir /mybase
+ ---> Using cache
+ ---> d1a0ffb5c1d3
+Step 11/17 : COPY requirements.txt /mybase
+ ---> Using cache
+ ---> 4385f433bd68
+Step 12/17 : RUN pip install -r /mybase/requirements.txt
+ ---> Using cache
+ ---> 7501dece577a
+Step 13/17 : RUN test -e /usr/local/lib/python3.7/site-packages/verboselogs/__init__.py && sed -i 's/SPAM/TRACE/g' /usr/local/lib/python3.7/site-packages/verboselogs/__init__.py
+ ---> Using cache
+ ---> e88c61276713
+Step 14/17 : RUN test -e /usr/local/lib/python3.7/site-packages/hunter/actions.py && sed -i 's/, buffering=0//g' /usr/local/lib/python3.7/site-packages/hunter/actions.py
+ ---> Using cache
+ ---> 8d930f87d703
+Step 15/17 : COPY __init__.py /usr/local/lib/python3.7/site-packages/mybase/__init__.py
+ ---> Using cache
+ ---> a851008a21a4
+Step 16/17 : LABEL noprune="yes"
+ ---> Using cache
+ ---> 2bd00e1884c9
+Step 17/17 : CMD ["python3"]
+ ---> Using cache
+ ---> 5d100d3d29c9
+Successfully built 5d100d3d29c9
+Successfully tagged registry.vpn:50006/mybase3.7:slim-buster

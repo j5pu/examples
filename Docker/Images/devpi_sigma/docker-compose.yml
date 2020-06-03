@@ -1,0 +1,14 @@
+# https://docs.docker.com/compose/compose-file/
+##### PARECE QUE VAAAAAAAAA
+version: "3"
+services:
+  devpi:
+    container_name: devpi
+    restart: always
+    image: sigma/devpi
+    environment:
+      - DEVPISERVER_ROOT_PASSWORD=1aragon1
+    ports:
+      - 3141:3141
+    volumes:
+      - ./data:/mnt

@@ -1,0 +1,12 @@
+bumpversion
+typing; python_version<"3.5"
+click
+flake8>=2.2.3
+ipython
+pytest-cov
+pytest>=3.9
+sh>=1.09
+tox
+wheel
+twine
+portray

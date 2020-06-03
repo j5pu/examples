@@ -1,0 +1,23 @@
+Metadata-Version: 1.2
+Name: import-getenv
+Version: 0.0.1
+Summary: Set of imports and os.getenv to be shared accross projects.
+Home-page: UNKNOWN
+Author: Carlo Coehlo
+Author-email: cc1@openmai.cc
+License: MIT
+Description: imports_getenv
+        --------------
+        
+        Import packages and get host env vars for all projects:
+        
+            >>> import import_getenv
+            >>> db_engine_url = f'{DB_ENGINE_URL}{DB_NAME if bool(DB_SERVER_TEST) else None}'
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7

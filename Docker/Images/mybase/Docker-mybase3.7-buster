@@ -1,0 +1,30 @@
+# Ansible managed
+FROM python:3.7-buster
+
+ENV BACK_SLASH '\'
+ENV SINGLE_QUOTE "'"
+ENV DOUBLE_QUOTE '"'
+ENV BACK_SLASH_SINGLE_QUOTE=${BACK_SLASH}${SINGLE_QUOTE}
+ENV REGEX_HREF_LINK_1C_2C (?<=href=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])|(?<=link=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])
+ENV REGEX_HREF_1C_2C (?<=href=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])
+ENV REGEX_LINK_1C_2C (?<=link=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])[^${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}]*(?=[${DOUBLE_QUOTE}${SINGLE_QUOTE}${BACK_SLASH_SINGLE_QUOTE}${SINGLE_QUOTE}])
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+		netcat \
+	&& rm -rf /var/lib/apt/lists/*
+
+RUN mkdir /mybase
+COPY requirements.txt /mybase
+RUN pip install -r /mybase/requirements.txt
+
+RUN test -e /usr/local/lib/python3.7/site-packages/verboselogs/__init__.py && sed -i 's/SPAM/TRACE/g' /usr/local/lib/python3.7/site-packages/verboselogs/__init__.py
+# grep TRACE /usr/local/lib/python3.7/site-packages/verboselogs/__init__.py
+
+RUN test -e /usr/local/lib/python3.7/site-packages/hunter/actions.py && sed -i 's/, buffering=0//g' /usr/local/lib/python3.7/site-packages/hunter/actions.py
+# grep stream_cache /usr/local/lib/python3.7/site-packages/hunter/actions.py
+
+COPY __init__.py /usr/local/lib/python3.7/site-packages/mybase/__init__.py
+
+LABEL noprune="yes"
+
+CMD ["python3"]

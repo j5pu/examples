@@ -1,0 +1,33 @@
+The push refers to repository [registry.vpn:50006/mybase3.7]
+66dd5e0761f9: Preparing
+6b71a770e226: Preparing
+7c0b606d5f8d: Preparing
+75ac0a8edfa9: Preparing
+861c47933367: Preparing
+e0f38a47904b: Preparing
+8b62e12b86ba: Preparing
+1808163506f4: Preparing
+acd5d8dd0a11: Preparing
+e18984c86e86: Preparing
+523a99e3c88d: Preparing
+1c95c77433e8: Preparing
+e0f38a47904b: Waiting
+8b62e12b86ba: Waiting
+1808163506f4: Waiting
+acd5d8dd0a11: Waiting
+e18984c86e86: Waiting
+523a99e3c88d: Waiting
+1c95c77433e8: Waiting
+861c47933367: Layer already exists
+75ac0a8edfa9: Layer already exists
+6b71a770e226: Layer already exists
+7c0b606d5f8d: Layer already exists
+66dd5e0761f9: Layer already exists
+e0f38a47904b: Layer already exists
+acd5d8dd0a11: Layer already exists
+e18984c86e86: Layer already exists
+8b62e12b86ba: Layer already exists
+1808163506f4: Layer already exists
+1c95c77433e8: Layer already exists
+523a99e3c88d: Layer already exists
+slim-buster: digest: sha256:19c3468e90bcd33e4eff9959983af01fce4d056958b3ef3a92903ad61ef2fb37 size: 2830

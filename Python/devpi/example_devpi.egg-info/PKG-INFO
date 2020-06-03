@@ -1,0 +1,16 @@
+Metadata-Version: 1.2
+Name: example-devpi
+Version: 0.0.4
+Summary: A insignificant project for the sake of documentation
+Home-page: http://1a1.host
+Author: Carlo Coehlo
+Author-email: cc1@openmai.cc
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.7

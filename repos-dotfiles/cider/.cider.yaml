@@ -1,0 +1,21 @@
+inherits:
+    - strictness_medium
+    - full_pep8
+
+pylint:
+  disable:
+    - invalid-name
+    - pointless-except
+    - redefined-outer-name
+    - too-many-arguments
+    - too-many-instance-attributes
+    - unnecessary-parens
+  enable:
+    - unused-argument
+  options:
+    generated-members: __globals__
+    ignored-modules: pytest
+
+pep8:
+  options:
+    max-line-length: 79

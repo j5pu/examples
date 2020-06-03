@@ -1,0 +1,30 @@
+---
+workspace: /root
+sonar_download_validate_certs: yes
+
+# Default to the latest LTS release.
+sonar_version: 4.5.6
+sonar_download_url: "https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-{{ sonar_version }}.zip"
+sonar_version_directory: "sonarqube-{{ sonar_version }}"
+
+sonar_web_context: ''
+
+# The Database engine.
+# possible values: postgres and mysql
+sonar_database_engine: postgres
+
+# Database connection details
+
+sonar_database_username: sonar
+sonar_database_password: sonar
+
+sonar_database_host: localhost
+# mysqlsql default port is 3306 and the postgres' is 5432
+sonar_database_port: "5432"
+sonar_database_name: sonar
+
+# MySQL database connection details.
+sonar_mysql_allowed_hosts:
+  - "127.0.0.1"
+  - "::1"
+  - "localhost"

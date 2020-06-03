@@ -1,0 +1,27 @@
+- name: dynamic dict
+  hosts: localhost
+  gather_facts: no
+  become: no
+  vars:
+    test_docker_distributions:
+        ubuntu:
+            - bionic
+            - focal
+            - xenial
+        centos:
+            - 7.6.1810
+
+  tasks:
+    - debug: var=test_docker_distributions
+      
+
+    # - set_fact: 
+    #     "{{ item.key }}": "{{ item.val }}"
+    #   with_items: "{{iter}}"
+    # - debug: msg="key={{item.key}}, hostvar={{hostvars['localhost'][item.key]}}"
+    #   with_items: "{{iter}}"
+
+    # - set_fact: 
+    #     test_packages: "{{ test|default({}) | combine( { item.key: 'nferx'+item.key+'test'} ) }}"
+    #   loop: "{{ formats|dict2items }}"
+    # - debug: var=test

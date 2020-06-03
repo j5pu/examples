@@ -1,0 +1,28 @@
+# Ansible managed
+FROM registry.vpn:50006/python3.7:base as dev
+COPY requirements.txt /requirements.txt
+RUN pip install -r /requirements.txt \
+    && rm -rf /root/.cache/pip/*
+LABEL name=phones stage=dev
+EXPOSE 50009 50009/udp
+CMD ['python3']
+
+
+FROM dev as wheels
+WORKDIR /wheels
+COPY --from=dev /dotfiles/symlinks/requirements.txt /wheels/requirements.txt
+RUN pip wheel --wheel-dir=/wheels -r /wheels/requirements.txt \
+    && pip wheel --wheel-dir=/wheels phones
+LABEL name=phones stage=wheels
+
+
+FROM wheels as prod
+COPY --from=wheels /wheels /wheels
+RUN pip install --no-index \
+                -r /wheels/requirements.txt \
+                --find-links=/wheels \
+    && rm -rf /wheels \
+    && rm -rf /root/.cache/pip/*
+LABEL not_pune=1 name=phones stage=prod
+EXPOSE 50009 50009/udp
+CMD ['python3']

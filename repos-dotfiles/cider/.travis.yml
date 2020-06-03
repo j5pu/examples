@@ -1,0 +1,11 @@
+language: python
+os: osx
+python:
+  - "2.7"
+  - "3.4"
+install:
+  - pip install -r requirements.txt --quiet
+  - pip install --editable .
+script:
+  - make analyze
+  - make test

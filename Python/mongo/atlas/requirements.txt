@@ -1,0 +1,4 @@
+pymongo[tls]
+mongo_thingy
+dnspython
+Flask-PyMongo

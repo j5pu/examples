@@ -1,0 +1,77 @@
+- name: dynamic dict
+  hosts: localhost
+  gather_facts: no
+  become: no
+  vars:
+    VPC: prueba
+    api_01_users:
+       - user1
+       - user2
+    users: '{{ { "api-01." + VPC: api_01_users } }}'
+    iter:
+      - key: abc
+        val: xyz
+      - key: efg
+        val: uvw
+    formats:
+      apk: False  # https://github.com/sonatype-nexus-community/nexus-repository-apk
+      apt: True
+      bower: False
+      cabal: False  # https://github.com/sonatype-nexus-community/nexus-repository-cabal
+      cocoapods: False
+      composer: False  # https://github.com/sonatype-nexus-community/nexus-repository-composer
+      conan: False  # Official supported - Community: https://github.com/sonatype-nexus-community/nexus-repository-conan
+      conda: False
+      cpan: False  # https://github.com/sonatype-nexus-community/nexus-repository-cpan
+      docker: False
+      gitlfs: False
+      go: False
+      helm: False  # Official supported - Community: https://github.com/sonatype-nexus-community/nexus-repository-helm
+      maven: False
+      npm: True
+      nuget: False
+      openstack: False  # https://github.com/mjmbischoff/nexus-blobstore-swift
+      p2: False  # Official supported - Community: https://github.com/sonatype-nexus-community/nexus-repository-p2
+      puppet: False  # https://github.com/sonatype-nexus-community/nexus-repository-puppet
+      pypi: True
+      r: False
+      raw: False
+      rubygems: False
+      yum: True
+    var_list: >
+      [ {% for host in groups['all'] %}'{{ host }}',{% endfor %} ]
+    var_dict: >
+       { {% for host in groups['all'] %}'{{ host }}': [],{% endfor %} }
+    # test: >
+    #   { {% for format in formats|dict1items %}'{{ format.key }}': ['nferx' + '{{ format.key }}' + 'test'],{% endfor %} }
+    test: >
+      { {% for format in formats.keys() %}'{{ format }}': 'nferx' + '{{ format }}' + 'test',{% endfor %} }
+    linux_distributions:
+      apt:
+        ubuntu: True
+        debian: False
+      yum:
+        centos: True
+        debian: True
+        redhat: True
+    yum_distributions_enabled: >
+     [ {% for item in linux_distributions['yum']|dict2items %}{% if item.value %}'{{ item.key }}',{% endif %}{% endfor %} ]
+    apt_distributions_enabled: >
+     [ {% for item in linux_distributions['apt']|dict2items %}{% if item.value %}'{{ item.key }}',{% endif %}{% endfor %} ]
+
+  tasks:
+    - debug: var=yum_distributions_enabled
+    - debug: var=apt_distributions_enabled
+    - debug: var=test
+    - debug: var=var_list
+    - debug: var=var_dict
+    - set_fact: 
+        "{{ item.key }}": "{{ item.val }}"
+      with_items: "{{iter}}"
+    - debug: msg="key={{item.key}}, hostvar={{hostvars['localhost'][item.key]}}"
+      with_items: "{{iter}}"
+
+    - set_fact: 
+        test_packages: "{{ test_packages|default({}) | combine( { item.key: 'nferx'+item.key+'test'} ) }}"
+      loop: "{{ formats|dict2items }}"
+    - debug: var=test_packages

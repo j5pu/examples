@@ -1,0 +1,43 @@
+<ul>
+    {% for item in toppages %}
+    <li><a href="{{ pathto(item[0]+file_suffix, 1)|e }}">{{ item[1] }}</a></li>
+    {% endfor %}
+</ul>
+<h4>CLI Reference</h4>
+<ul>
+{% set cliurl = pathto('ref/cli'+file_suffix, 1) %}
+{% if cliurl == "#" %}
+    {% set cliurl = "" %}
+{% endif %}
+{% for sub in cliheadings %}
+    <li><a href="{{ cliurl|e }}#{{ sub[0] }}">{{ sub[1]|e }}</a></li>
+{% endfor %}
+</ul>
+
+<h4>Module Reference</h4>
+<ul>
+{% for item in refpagenames|sort %}
+    {% set refurl = pathto('ref/'+item+file_suffix, 1) %}
+    <li>
+        <a href="{{ refurl|e }}">homely.{{ item }}</a>
+        {% if pagename == ('ref/'+item) and refpageheadings[item]|length > 0 %}
+            <ul>
+            {% for sub in refpageheadings[item] %}
+                <li><a href="{{ refurl|e }}{{ sub[0] }}">{{ sub[1]|e }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+<h4>License</h4>
+<ul>
+    <li><a href="{{ pathto('license'+file_suffix, 1)|e }}">MIT License</a></li>
+</ul>
+<h4>Other Links</h4>
+<ul>
+    <li><a href="https://github.com/phodge/homely/">GitHub project</a></li>
+    <li><a href="https://pypi.python.org/pypi/homely/">PyPI Homepage</a></li>
+    <li><a href="https://dotfiles.github.io/">GitHub unofficial dotfiles guide</a></li>
+    <li><a href="{{ pathto('_static/slides.html', 1)|e }} ">Slides</a></li>
+</ul>

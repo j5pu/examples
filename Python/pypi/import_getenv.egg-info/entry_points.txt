@@ -1,0 +1,3 @@
+[console_scripts]
+import_getenv = import_getenv.entry_point_command_line:main
+

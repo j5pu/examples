@@ -1,0 +1,11 @@
+[Unit]
+Description = Random Tor IP change
+After = network.target
+
+[Service]
+Type = simple
+ExecStart = /home/fp/tbot/ip.py
+Restart = on-abort
+
+[Install]
+WantedBy = multi-user.target
