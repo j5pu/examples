@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalDependencies">
+    <plugin id="Docker" />
+    <plugin id="Mongo Plugin" />
+    <plugin id="NodeJS" />
+    <plugin id="Pythonid" />
+    <plugin id="YAML/Ansible support" />
+    <plugin id="com.intellij.database" />
+    <plugin id="com.intellij.ideolog" />
+    <plugin id="com.intellij.stats.completion" />
+    <plugin id="com.jetbrains.intellij.datalore" />
+    <plugin id="com.jetbrains.plugins.ini4idea" />
+    <plugin id="com.jetbrains.pycharm.pro.customization" />
+    <plugin id="com.jetbrains.sh" />
+    <plugin id="com.mallowigi" />
+    <plugin id="izhangzhihao.rainbow.brackets" />
+    <plugin id="mobi.hsz.idea.gitignore" />
+    <plugin id="name.kropp.intellij.makefile" />
+    <plugin id="net.ashald.envfile" />
+    <plugin id="net.seesharpsoft.intellij.plugins.csv" />
+    <plugin id="net.seesharpsoft.intellij.plugins.file-preview" />
+    <plugin id="org.intellij.plugins.markdown" />
+    <plugin id="org.jetbrains.plugins.rest" />
+    <plugin id="org.jetbrains.plugins.yaml" />
+    <plugin id="pl.szymonprz.idea-cheatsh-plugin" />
+    <plugin id="ru.meanmail.plugin.requirements" />
+  </component>
+</project>
